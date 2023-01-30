@@ -1,0 +1,18 @@
+<h1>Results</h1>
+
+<% if @include %>
+  <% if @valid %>
+    <p>You win</p>
+    <p>Score = <%= @score %></p>
+  <% else %>
+    <p>That is not an English word</p>
+  <% end %>
+<% else %>
+  <p>Please only use letters from the grid</p>
+<% end %>
+
+
+
+<button class="btn btn-primary">
+<%= link_to "Play again!", new_path, class: "text" %>
+</button>
